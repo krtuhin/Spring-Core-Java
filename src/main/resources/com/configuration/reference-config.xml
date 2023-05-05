@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!--java classes as bean-->
+    
+    <!--This is Reference Type-->
+    
+    <bean class="com.references.B" name="b">
+        
+        <!--variables-->
+        <property name="y" value="52692568"/>
+        
+    </bean>
+    
+    <bean class="com.references.A" name="a">
+        
+        <property name="x" value="465456"/>
+        
+        <property name="ob">
+            
+            <!--set value of B class object-->
+            <ref bean="b"/>
+            
+        </property>
+        
+    </bean>
+    
+    <!--another way-->
+    <bean class="com.references.A" name="aa">
+        
+        <property name="x" value="4522"/>
+        
+        <!--setting reference value using attribute-->
+        <property name="ob" ref="b"/>
+        
+    </bean>
+    
+    <!--another way, this is the easiest way using p scema-->
+    <bean class="com.references.A" name="aaa" p:x="1258" p:ob-ref="b"/>
+    
+</beans>
