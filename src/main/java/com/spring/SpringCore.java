@@ -13,8 +13,10 @@ public class SpringCore {
 
         Student std = (Student) context.getBean("st");
         Student st = (Student) context.getBean("student");
+        Student student = (Student) context.getBean("std");
 
         System.out.println(std);
         System.out.println(st);
+        System.out.println(student);
     }
 }
