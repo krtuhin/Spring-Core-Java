@@ -9,17 +9,21 @@
     <bean class="com.spring.Student" name="st">
         
         <!--variables-->
-        <property name="studentId">
-            <value>1234</value>
-        </property>
+        <property name="studentId" value="3542"/>
         
-        <property name="studentName">
-            <value>Tuhin Kumar</value>
-        </property>
+        <property name="studentName" value="Suresh Singh"/>
         
-        <property name="studentAddress">
-            <value>Kolkata</value>
-        </property>
+        <property name="studentAddress" value="Pune"/>
+        
+    </bean>
+    
+    <!--another bean-->
+    <bean class="com.spring.Student" name="student">
+        
+        <property name="studentId" value="7568" />
+        <property name="studentName" value="Rajat"/>
+        <property name="studentAddress" value="Delhi"/>
+        
     </bean>
     
 </beans>

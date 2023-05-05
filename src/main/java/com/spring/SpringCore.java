@@ -12,7 +12,9 @@ public class SpringCore {
                 = new ClassPathXmlApplicationContext("com/configuration/config.xml");
 
         Student std = (Student) context.getBean("st");
+        Student st = (Student) context.getBean("student");
 
         System.out.println(std);
+        System.out.println(st);
     }
 }
