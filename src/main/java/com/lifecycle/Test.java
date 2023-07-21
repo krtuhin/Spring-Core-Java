@@ -22,5 +22,9 @@ public class Test {
         Mobile mobile = (Mobile) context.getBean("mobile");
 
         System.out.println(mobile);
+
+        Computer computer = (Computer) context.getBean("computer");
+        
+        System.out.println(computer);
     }
 }
