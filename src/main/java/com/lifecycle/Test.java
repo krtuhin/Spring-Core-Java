@@ -16,5 +16,11 @@ public class Test {
 
         //calling destroy method
         context.registerShutdownHook();
+
+        System.out.println("\n+++++++++++++++++++++++++++++++++++++++\n");
+
+        Mobile mobile = (Mobile) context.getBean("mobile");
+
+        System.out.println(mobile);
     }
 }

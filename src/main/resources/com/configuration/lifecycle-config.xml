@@ -14,4 +14,12 @@
         
     </bean>
     
+    <!--mobile class declared-->
+    <bean class="com.lifecycle.Mobile" name="mobile">
+        
+        <!--set value by setter method-->
+        <property name="price" value="15000" />
+        
+    </bean>
+    
 </beans>
