@@ -20,6 +20,14 @@
         
     </bean>
     
+    <!--Address class-->
+    <bean class="com.autowire.annotation.Address" name="address1">
+        
+        <property name="street" value="Pune Road" />
+        <property name="city" value="Pune"/>
+        
+    </bean>
+    
     <!--Employee class-->
     <bean class="com.autowire.annotation.Employee" name="emp" />
     

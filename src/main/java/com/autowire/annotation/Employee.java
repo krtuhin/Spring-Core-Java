@@ -1,20 +1,22 @@
 package com.autowire.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 
     //@Autowired - can be declare any of these three places
     
-    //either here
+    //@Qualifier - this is used to access the bean by name when there are more than one bean with same type
+    //@Qualifier annotation always followed by @Autowired annotation
+    
     @Autowired
+    @Qualifier("address1")
     private Address address;
 
     public Employee() {
     }
 
-    //or here
-    @Autowired
     public Employee(Address address) {
         this.address = address;
 
@@ -25,8 +27,6 @@ public class Employee {
         return address;
     }
 
-    //or here
-    @Autowired
     public void setAddress(Address address) {
         this.address = address;
 
