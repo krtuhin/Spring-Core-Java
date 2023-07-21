@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!--Address class-->
+    <bean class="com.autowire.Address" name="address">
+        
+        <property name="street" value="BT Road" />
+        <property name="city" value="Kolkata"/>
+        
+    </bean>
+    
+    <!--auto wire by name (bean name and reference variable name have to be same)-->
+    <bean class="com.autowire.Employee" name="emp" autowire="byName" />
+    
+    <!--auto wire by type (reference type and bean class type need to be same)-->
+    <bean class="com.autowire.Employee" name="emp1" autowire="byType" />
+    
+    <!--autowire by constructor (bean name and reference variable name need to be same but it set value using constructor)-->
+    <bean class="com.autowire.Employee" name="emp2" autowire="constructor" />
+    
+</beans>
