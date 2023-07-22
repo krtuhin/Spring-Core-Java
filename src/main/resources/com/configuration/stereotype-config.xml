@@ -25,4 +25,7 @@
         
     </util:list>
     
+    <!--Teacher class and scope prototype-->
+    <bean class="com.stereotype.Teacher" name="teacher" scope="prototype"/>
+    
 </beans>
