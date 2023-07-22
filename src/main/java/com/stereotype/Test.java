@@ -12,5 +12,6 @@ public class Test {
         Student student = (Student) context.getBean("obj", Student.class);
 
         System.out.println(student);
+        System.out.println(student.getFreinds().getClass().getName());
     }
 }
